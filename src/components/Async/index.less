@@ -1,0 +1,30 @@
+/* Async block */
+.spinning {
+  &.inline {
+    display: inline-block;
+  }
+
+  &.block {
+    text-align: center;
+    padding: 10px;
+    color: lighten(blue, 10%);
+  }
+
+  &.inner {
+    .spinner {
+      margin: 5px !important;
+    }
+  }
+
+  &.md .spinner {
+    // transform: scale(0.8);
+  }
+
+  &.big .spinner {
+
+  }
+
+  &.sm .spinner {
+    // transform: scale(0.4);
+  }
+}

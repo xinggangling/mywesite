@@ -1,0 +1,99 @@
+@import 'assets/iconfontantdicon/iconfont.css';
+@import 'assets/iconfont/iconfont.css';
+
+html, body, #react-content, .app, .layout, .app-body {
+	height: 100%;
+	overflow: hidden;
+	font-family: 'Arial', 'Microsoft YaHei', '黑体', '宋体', sans-serif !important;
+	color: #555 !important;
+	font-size: 14px;
+	letter-spacing: 0.5px !important;
+}
+.content-block {
+	//position: absolute;
+
+	.content-block-body {
+		background-color: white;
+		padding: 20px;
+
+		.ace_content {
+			text-align: left !important;
+		}
+	}
+	.content-block-header {
+		height: 48px;
+		line-height: 48px;
+		background-color: #00BCD4;
+		color: white;
+		padding-left: 12px;
+		font-weight: 700;
+		text-align: left;
+		font-size: 16px;
+		box-shadow: lightgrey -3px 3px 1px 1px;
+		position: relative;
+	}
+}
+.card-block {
+	.card-block-header {
+		border-bottom: 1px solid #ccc;
+		color: #555;
+		font-size: 16px;
+		height: 26px;
+		line-height: 26px;
+		padding-left: 5px;
+		text-align: left;
+	}
+	.card-block-body {
+		background-color: white;
+		padding: 20px;
+
+		.ace_content {
+			text-align: left !important;
+		}
+		.ant-table-wrapper.no-row-line {
+			.ant-table-tbody > tr > td {
+				border: 0px;
+			}
+			.ant-table-tbody .line-col {
+				position: relative;
+				white-space: nowrap;
+				overflow: hidden;
+
+				.line-span {
+					display: inline-block;
+					position: relative;
+					width: 100%;
+				}
+				.line-span:after {
+					content: ' ';
+					width: 100%;
+					border-bottom: 1px dashed #d9d9d9;
+					height: 1px;
+					position: absolute;
+					top: 14px;
+				}
+			}
+			.ant-table-body table td {
+				padding: 5px 12px !important;
+			}
+		}
+	}
+}
+// override antd less
+.ant-layout-sider-collapsed .ant-menu-item .icon, .ant-layout-sider-collapsed .ant-menu-item-group > .ant-menu-item-group-list > .ant-menu-item .icon, .ant-layout-sider-collapsed .ant-menu-item-group > .ant-menu-item-group-list > .ant-menu-submenu > .ant-menu-submenu-title .icon, .ant-layout-sider-collapsed .ant-menu-submenu > .ant-menu-submenu-title .icon {
+	font-size: 16px;
+	line-height: 40px;
+	margin: 0;
+}
+.ant-layout-sider-collapsed .ant-menu-item .icon + span, .ant-layout-sider-collapsed .ant-menu-item-group > .ant-menu-item-group-list > .ant-menu-item .icon + span, .ant-layout-sider-collapsed .ant-menu-item-group > .ant-menu-item-group-list > .ant-menu-submenu > .ant-menu-submenu-title .icon + span, .ant-layout-sider-collapsed .ant-menu-submenu > .ant-menu-submenu-title .icon + span {
+	max-width: 32px;
+	display: inline-block;
+	opacity: 0;
+}
+.ant-menu-item .icon, .ant-menu-submenu-title .icon {
+	min-width: 14px;
+	margin-right: 10px;
+	font-size: 14px;
+	-webkit-transition: font-size 0.15s cubic-bezier(0.215, 0.61, 0.355, 1), margin 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+	transition: font-size 0.15s cubic-bezier(0.215, 0.61, 0.355, 1), margin 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
