@@ -21,7 +21,7 @@ const client = new ApiClient();
 
 // const render = () => {
 //   const store = createStore(history, client);
-//   debugger;
+//   // debugger;
 //   ReactDOM.render(
 //     <App/>,
 //     document.getElementById('react-content'),

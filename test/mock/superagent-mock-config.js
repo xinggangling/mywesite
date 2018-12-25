@@ -60,18 +60,18 @@ module.exports = [
       };
     }
   },
-  // {
-  //   method: 'GET',
-  //   pattern: `s3/download/(\\w*)`,
-  //   fixtures: () => {
-  //     return respLoader('mock.pdb');
-  //   },
-  //   callback: (match, data) => {
-  //     return {
-  //       text: data
-  //     };
-  //   }
-  // },
+  {
+    method: 'GET',
+    pattern: `${PRE_FIX}/daily/list$`,
+    fixtures: () => {
+      return respLoader('noteList');
+    },
+    callback: function (match, data) {
+      return {
+        body: {result: data, return_code: 'success'}
+      };
+    }
+  },
   {
     method: 'GET',
     pattern: `${PRE_FIX}/(\\w*)/\\w*$`,

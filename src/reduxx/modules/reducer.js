@@ -2,11 +2,13 @@ import { combineReducers } from 'redux';
 import nSys from './notification';
 import request from './request';
 import auth from './auth';
+import dailyMiniNote from './dailyMiniNote';
 
 const appReducer = combineReducers({
   auth,
   request,
   nSys,
+  dailyMiniNote
 });
 
 /* Create a top level reducer to faciliate store clean up*/

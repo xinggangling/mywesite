@@ -66,6 +66,30 @@ module.exports = merge(baseWebpackConfig, {
     //     from: path.resolve(__dirname, '../src/assets/js/vendor.dll.js'),
     //     to: path.resolve(__dirname, '../docker/build')
     // }]),
+    new CopyWebpackPlugin([{
+        from: path.resolve(__dirname, '../src/assets/js'),
+        to: path.resolve(__dirname, '../docker/build')
+    }]),
+    new CopyWebpackPlugin([{
+      from: path.resolve(__dirname, '../src/assets/utf8-php'),
+      to: path.resolve(__dirname, '../docker/build')
+    }]),
+    // new CopyWebpackPlugin([{
+    //   from: path.resolve(__dirname, '../src/assets/models/ballroom'),
+    //   to: path.resolve(__dirname, '../docker/build')
+    // }]),
+    // new CopyWebpackPlugin([{
+    //   from: path.resolve(__dirname, '../src/assets/models/demotest'),
+    //   to: path.resolve(__dirname, '../docker/build')
+    // }]),
+    new CopyWebpackPlugin([{
+      from: path.resolve(__dirname, '../src/assets/models/mmpic'),
+      to: path.resolve(__dirname, '../docker/build')
+    }]),
+    // new CopyWebpackPlugin([{
+    //   from: path.resolve(__dirname, '../src/assets/models/inroom'),
+    //   to: path.resolve(__dirname, '../docker/build')
+    // }]),
     new HtmlWebpackPlugin({
       minify: {
         removeComments: true,

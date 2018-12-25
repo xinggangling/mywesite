@@ -9896,10 +9896,17 @@ function FiberNode(tag, pendingProps, key, mode) {
 // 1) Nobody should add any instance methods on this. Instance methods can be
 //    more difficult to predict when they get optimized and they are almost
 //    never inlined properly in static compilers.
+//    
+//    没有人应该为此添加任何实例方法。实例方法在得到优化时更难预测，而且在静态编译器中它们几乎从来没有正确内联。
+//    
 // 2) Nobody should rely on `instanceof Fiber` for type testing. We should
 //    always know when it is a fiber.
+//    
 // 3) We might want to experiment with using numeric keys since they are easier
-//    to optimize in a non-JIT environment.
+//    to optimize in a non-JIT environment. 
+//    
+//    Just-In-Time 运行时编译执行的技术
+//    
 // 4) We can easily go from a constructor to a createFiber object literal if that
 //    is faster.
 // 5) It should be easy to port this to a C struct and keep a C implementation

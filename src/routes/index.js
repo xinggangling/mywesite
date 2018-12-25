@@ -13,6 +13,10 @@ import {
 	BriefIntroductionToD3
 } from 'routes/D3Study';
 
+import {
+	NoteList
+} from 'routes/DailyMiniNote';
+
 export const routes = [
   {
   	key: '/profile',
@@ -70,6 +74,23 @@ export const routes = [
 	  		icontype: '',
 	  		route: '/python/briefintro',
 	  		component: BriefIntroductionToD3
+	  	}
+	  ]
+	},
+	{
+  	key: '/dailymininote',
+  	path: '/dailymininote',
+  	title: '日常小笔记',
+  	icontype: 'language-python-text',
+  	route: '/dailymininote',
+  	routes: [
+  		{
+  			key: '/dailymininote/notelist',
+	  		path: '/dailymininote/notelist',
+	  		title: '日常小笔记',
+	  		icontype: '',
+	  		route: '/dailymininote/notelist',
+	  		component: NoteList
 	  	}
 	  ]
 	}
